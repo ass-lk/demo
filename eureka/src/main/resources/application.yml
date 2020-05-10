@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-server # 设置spring应用名称
+server:
+  port: 8761 # 配置eureka的端口信息
+eureka:
+  client:
+    register-with-eureka: false # 是否将自己注册到Eureka-Server中默认信息为true
+    fetch-registry: false # 是否从Eureka-Server中获取服务注册信息,默认为true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    # 设置服务注册中心地址,指向另一个host
+#    service-url:
+#      defaultZone: http://eurekaserver2:8761/eureka/
+  # 设置eureka实例名称,建议与配置文件的变量相同,必须和Linux系统域名相同
+#  instance:
+#    hostname: eurekaserver1
